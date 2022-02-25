@@ -406,7 +406,7 @@ a.selected {
         flex-wrap: wrap;
         align-items: center;} 
     .h4-pre{
-        margin: 20px;
+        margin: 10px;
     }
     
     } 
@@ -573,7 +573,8 @@ button {
 /* Media srcenn------------------------------- */
 @media screen and (max-width: 835px){
     .container{
-        flex-direction: column;
+        flex-direction: column; 
+        width: 50%;
         
     }  
 }
