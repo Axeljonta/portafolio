@@ -288,9 +288,10 @@ a.selected {
     padding: 20px;
     font-size: 18px; 
     font-weight: 400;
-    margin: 20px 150px; 
+    margin: 20px 150px;  
     border: var(--color-azul2) solid 3px; 
-    border-radius: var(--border-redious);
+    border-radius: var(--border-redious); 
+    z-index: 160;
 
 } 
 .wave2 {
@@ -406,7 +407,8 @@ a.selected {
         flex-wrap: wrap;
         align-items: center;} 
     .h4-pre{
-        margin: 10px;
+        margin: 10px; 
+        margin-bottom: 50px;
     }
     
     } 
@@ -462,7 +464,7 @@ a.selected {
  }
  .container-img{ 
     -webkit-filter: grayscale(100%);  
-    height: 100%;
+    max-height: 100%;
     max-width: 100%;
     cursor: pointer;
     object-fit: contain;
@@ -575,6 +577,7 @@ button {
     .container{
         flex-direction: column; 
         max-width: 70%;
+
         }   
 }
 
