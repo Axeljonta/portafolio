@@ -1,0 +1,613 @@
+/* Esitlos generales-------------------------------------------------------- */  
+:root{
+    --color-azul1:#21325E ;
+    --color-azul2:#3E497A;
+    --color-ama:#F1D00A;
+    --color-blanco:#F0F0F0; 
+    --box-black: 8px 10px 10px rgba(0, 0, 0, 0.604); 
+    --border-redious: 20px;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+font-family: 'Poppins', sans-serif;  
+scroll-behavior: smooth;
+} 
+
+body{ 
+    overflow-x: hidden;
+    margin-left: 65px; 
+    margin-top: 80px;
+    transition: margin-left 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}  
+.titulos{
+    position: relative; 
+    margin-top: 6px; 
+    margin-left: 15px;
+    padding: 20px;
+    font-size: 28px; 
+    font-weight: 700; 
+    background-color: #F1D00A;  
+    display: inline-block;
+    color: var(--color-azul2); 
+    box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.604); 
+    border-radius: var(--border-redious); 
+}
+
+/* Estilos header------------------------------------------------------------------------- */
+header{
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-azul1)  ;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 300; 
+    display: flex;
+}
+
+.icon_menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+} 
+.icon_menu i:hover{
+    color: var(--color-ama);
+}
+
+.icon_menu i {
+    font-size: 20px;
+    cursor: pointer; 
+    color: var(--color-blanco);
+}
+/* Estilo menu lateral------------------------------------------------------------------------ */
+.menu_side{
+    width: 65px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--color-blanco); 
+    font-size: 18px; 
+    background-color: var(--color-azul1) ;
+    overflow: hidden; 
+    overflow-y: scroll;
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+} 
+/*ocultar scroll*/
+.menu_side::-webkit-scrollbar{
+    display: none;
+}
+.menu_side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}  
+/* fin ocultar scroll */
+.menu_side a {
+    text-decoration: none; 
+    color: var(--color-blanco);
+}
+/* todos los iconos */
+.icon{
+    font-size: 22px;
+}
+/* fin iconos */
+
+.name_page{
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px; 
+    cursor: pointer; 
+    transition: 500ms;
+} 
+.name_page:hover{
+    color: var(--color-ama);
+}
+
+.name_page i{ 
+    width: 20px;
+    margin-right: 20px;
+}
+.options_menu{
+    padding: 20px 25px;
+    position: absolute;
+    top: 80px;
+}
+.options_menu a{
+    color:var(--color-blanco) ;
+    cursor: default;
+    display: block;
+    position: relative; 
+    transition: color 400ms;
+
+} 
+.options_menu a:hover{
+   color: var(--color-ama);
+} 
+.options_menu .options {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+.options_menu .options i {
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.options_menu .options h4 {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+a.selected {
+    color: var(--color-ama);
+    font-weight: 800;
+} 
+
+.selected::before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: var(--color-ama);
+    position: absolute;
+    top: 10%;
+    left: -30px;
+
+}
+
+/*clases para usar en JS*/
+
+.body_move{
+    margin-left: 250px;
+}
+.menu_side_move{
+    width: 250px;
+} 
+
+/* media cueri menu lateral-------- */
+
+@media screen and (max-width: 760px) {
+    .body_move{
+        margin-left: 0px;
+    }
+    .menu_side_move{
+        width: 80px;
+        left: -80px;
+    }
+} 
+/* Estilo de cavecera desktop----------------------------------------------------------------------------- -------------*/
+.cabecera{
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1058%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(240%2c 240%2c 240%2c 1)'%3e%3c/rect%3e%3cpath d='M102.81 -79.88L196.34 -25.88L196.34 82.12L102.81 136.12L9.28 82.12L9.28 -25.88zM383.41 406.12L476.94 460.12L476.94 568.12L383.41 622.12L289.88 568.12L289.88 460.12zM570.48 82.12L664.01 136.12L664.01 244.12L570.48 298.12L476.94 244.12L476.94 136.12zM664.01 244.12L757.54 298.12L757.54 406.12L664.01 460.12L570.48 406.12L570.48 298.12zM757.54 406.12L851.08 460.12L851.08 568.12L757.54 622.12L664.01 568.12L664.01 460.12zM851.08 -79.88L944.61 -25.88L944.61 82.12L851.08 136.12L757.54 82.12L757.54 -25.88zM1131.68 406.12L1225.21 460.12L1225.21 568.12L1131.68 622.12L1038.14 568.12L1038.14 460.12z' stroke='rgba(241%2c 208%2c 10%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M92.01 -79.88 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM185.54 -25.88 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM185.54 82.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM92.01 136.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM-1.52 82.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM-1.52 -25.88 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM372.61 406.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM466.14 460.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM466.14 568.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM372.61 622.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM279.08 568.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM279.08 460.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM559.68 82.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM653.21 136.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM653.21 244.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM559.68 298.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM466.14 244.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM466.14 136.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM746.74 298.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM746.74 406.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM653.21 460.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM559.68 406.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM840.28 460.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM840.28 568.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM746.74 622.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM653.21 568.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM840.28 -79.88 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM933.81 -25.88 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM933.81 82.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM840.28 136.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM746.74 82.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM746.74 -25.88 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM1120.88 406.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM1214.41 460.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM1214.41 568.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM1120.88 622.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM1027.34 568.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0zM1027.34 460.12 a10.8 10.8 0 1 0 21.6 0 a10.8 10.8 0 1 0 -21.6 0z' fill='rgba(241%2c 208%2c 10%2c 1)'%3e%3c/path%3e%3cpath d='M41 35.28L74.77 54.78L74.77 93.78L41 113.28L7.22 93.78L7.22 54.78zM41 152.28L74.77 171.78L74.77 210.78L41 230.28L7.22 210.78L7.22 171.78zM41 269.28L74.77 288.78L74.77 327.78L41 347.28L7.22 327.78L7.22 288.78zM74.77 -23.22L108.55 -3.72L108.55 35.28L74.77 54.78L41 35.28L41 -3.72zM108.55 503.28L142.32 522.78L142.32 561.78L108.55 581.28L74.77 561.78L74.77 522.78zM74.77 561.78L108.55 581.28L108.55 620.28L74.77 639.78L41 620.28L41 581.28zM176.1 35.28L209.88 54.78L209.88 93.78L176.1 113.28L142.32 93.78L142.32 54.78zM176.1 386.28L209.88 405.78L209.88 444.78L176.1 464.28L142.32 444.78L142.32 405.78zM209.88 210.78L243.65 230.28L243.65 269.28L209.88 288.78L176.1 269.28L176.1 230.28zM209.88 444.78L243.65 464.28L243.65 503.28L209.88 522.78L176.1 503.28L176.1 464.28zM243.65 503.28L277.43 522.78L277.43 561.78L243.65 581.28L209.88 561.78L209.88 522.78zM311.2 35.28L344.98 54.78L344.98 93.78L311.2 113.28L277.43 93.78L277.43 54.78zM311.2 269.28L344.98 288.78L344.98 327.78L311.2 347.28L277.43 327.78L277.43 288.78zM277.43 561.78L311.2 581.28L311.2 620.28L277.43 639.78L243.65 620.28L243.65 581.28zM344.98 93.78L378.76 113.28L378.76 152.28L344.98 171.78L311.2 152.28L311.2 113.28zM378.76 152.28L412.53 171.78L412.53 210.78L378.76 230.28L344.98 210.78L344.98 171.78zM446.31 35.28L480.08 54.78L480.08 93.78L446.31 113.28L412.53 93.78L412.53 54.78zM446.31 269.28L480.08 288.78L480.08 327.78L446.31 347.28L412.53 327.78L412.53 288.78zM412.53 444.78L446.31 464.28L446.31 503.28L412.53 522.78L378.76 503.28L378.76 464.28zM446.31 503.28L480.08 522.78L480.08 561.78L446.31 581.28L412.53 561.78L412.53 522.78zM412.53 561.78L446.31 581.28L446.31 620.28L412.53 639.78L378.76 620.28L378.76 581.28zM513.86 35.28L547.64 54.78L547.64 93.78L513.86 113.28L480.08 93.78L480.08 54.78zM480.08 327.78L513.86 347.28L513.86 386.28L480.08 405.78L446.31 386.28L446.31 347.28zM480.08 444.78L513.86 464.28L513.86 503.28L480.08 522.78L446.31 503.28L446.31 464.28zM480.08 561.78L513.86 581.28L513.86 620.28L480.08 639.78L446.31 620.28L446.31 581.28zM547.64 -23.22L581.41 -3.72L581.41 35.28L547.64 54.78L513.86 35.28L513.86 -3.72zM581.41 269.28L615.19 288.78L615.19 327.78L581.41 347.28L547.64 327.78L547.64 288.78zM547.64 327.78L581.41 347.28L581.41 386.28L547.64 405.78L513.86 386.28L513.86 347.28zM581.41 386.28L615.19 405.78L615.19 444.78L581.41 464.28L547.64 444.78L547.64 405.78zM615.19 93.78L648.96 113.28L648.96 152.28L615.19 171.78L581.41 152.28L581.41 113.28zM615.19 327.78L648.96 347.28L648.96 386.28L615.19 405.78L581.41 386.28L581.41 347.28zM615.19 444.78L648.96 464.28L648.96 503.28L615.19 522.78L581.41 503.28L581.41 464.28zM648.96 503.28L682.74 522.78L682.74 561.78L648.96 581.28L615.19 561.78L615.19 522.78zM615.19 561.78L648.96 581.28L648.96 620.28L615.19 639.78L581.41 620.28L581.41 581.28zM716.51 35.28L750.29 54.78L750.29 93.78L716.51 113.28L682.74 93.78L682.74 54.78zM716.51 152.28L750.29 171.78L750.29 210.78L716.51 230.28L682.74 210.78L682.74 171.78zM716.51 269.28L750.29 288.78L750.29 327.78L716.51 347.28L682.74 327.78L682.74 288.78zM716.51 386.28L750.29 405.78L750.29 444.78L716.51 464.28L682.74 444.78L682.74 405.78zM682.74 444.78L716.51 464.28L716.51 503.28L682.74 522.78L648.96 503.28L648.96 464.28zM784.07 152.28L817.84 171.78L817.84 210.78L784.07 230.28L750.29 210.78L750.29 171.78zM784.07 269.28L817.84 288.78L817.84 327.78L784.07 347.28L750.29 327.78L750.29 288.78zM750.29 327.78L784.07 347.28L784.07 386.28L750.29 405.78L716.51 386.28L716.51 347.28zM817.84 93.78L851.62 113.28L851.62 152.28L817.84 171.78L784.07 152.28L784.07 113.28zM851.62 152.28L885.39 171.78L885.39 210.78L851.62 230.28L817.84 210.78L817.84 171.78zM817.84 327.78L851.62 347.28L851.62 386.28L817.84 405.78L784.07 386.28L784.07 347.28zM817.84 444.78L851.62 464.28L851.62 503.28L817.84 522.78L784.07 503.28L784.07 464.28zM885.39 210.78L919.17 230.28L919.17 269.28L885.39 288.78L851.62 269.28L851.62 230.28zM919.17 269.28L952.95 288.78L952.95 327.78L919.17 347.28L885.39 327.78L885.39 288.78zM885.39 327.78L919.17 347.28L919.17 386.28L885.39 405.78L851.62 386.28L851.62 347.28zM919.17 386.28L952.95 405.78L952.95 444.78L919.17 464.28L885.39 444.78L885.39 405.78zM885.39 444.78L919.17 464.28L919.17 503.28L885.39 522.78L851.62 503.28L851.62 464.28zM952.95 -23.22L986.72 -3.72L986.72 35.28L952.95 54.78L919.17 35.28L919.17 -3.72zM952.95 210.78L986.72 230.28L986.72 269.28L952.95 288.78L919.17 269.28L919.17 230.28zM1020.5 -23.22L1054.27 -3.72L1054.27 35.28L1020.5 54.78L986.72 35.28L986.72 -3.72zM1054.27 269.28L1088.05 288.78L1088.05 327.78L1054.27 347.28L1020.5 327.78L1020.5 288.78zM1020.5 327.78L1054.27 347.28L1054.27 386.28L1020.5 405.78L986.72 386.28L986.72 347.28zM1054.27 386.28L1088.05 405.78L1088.05 444.78L1054.27 464.28L1020.5 444.78L1020.5 405.78zM1020.5 444.78L1054.27 464.28L1054.27 503.28L1020.5 522.78L986.72 503.28L986.72 464.28zM1121.83 35.28L1155.6 54.78L1155.6 93.78L1121.83 113.28L1088.05 93.78L1088.05 54.78zM1155.6 93.78L1189.38 113.28L1189.38 152.28L1155.6 171.78L1121.83 152.28L1121.83 113.28zM1155.6 210.78L1189.38 230.28L1189.38 269.28L1155.6 288.78L1121.83 269.28L1121.83 230.28zM1189.38 503.28L1223.15 522.78L1223.15 561.78L1189.38 581.28L1155.6 561.78L1155.6 522.78zM1256.93 269.28L1290.71 288.78L1290.71 327.78L1256.93 347.28L1223.15 327.78L1223.15 288.78zM1256.93 386.28L1290.71 405.78L1290.71 444.78L1256.93 464.28L1223.15 444.78L1223.15 405.78zM1324.48 35.28L1358.26 54.78L1358.26 93.78L1324.48 113.28L1290.71 93.78L1290.71 54.78zM1290.71 210.78L1324.48 230.28L1324.48 269.28L1290.71 288.78L1256.93 269.28L1256.93 230.28zM1358.26 -23.22L1392.03 -3.72L1392.03 35.28L1358.26 54.78L1324.48 35.28L1324.48 -3.72zM1392.03 35.28L1425.81 54.78L1425.81 93.78L1392.03 113.28L1358.26 93.78L1358.26 54.78zM1358.26 93.78L1392.03 113.28L1392.03 152.28L1358.26 171.78L1324.48 152.28L1324.48 113.28zM1392.03 386.28L1425.81 405.78L1425.81 444.78L1392.03 464.28L1358.26 444.78L1358.26 405.78zM1358.26 444.78L1392.03 464.28L1392.03 503.28L1358.26 522.78L1324.48 503.28L1324.48 464.28zM1358.26 561.78L1392.03 581.28L1392.03 620.28L1358.26 639.78L1324.48 620.28L1324.48 581.28zM1425.81 93.78L1459.59 113.28L1459.59 152.28L1425.81 171.78L1392.03 152.28L1392.03 113.28zM1425.81 210.78L1459.59 230.28L1459.59 269.28L1425.81 288.78L1392.03 269.28L1392.03 230.28zM1459.59 269.28L1493.36 288.78L1493.36 327.78L1459.59 347.28L1425.81 327.78L1425.81 288.78zM1459.59 386.28L1493.36 405.78L1493.36 444.78L1459.59 464.28L1425.81 444.78L1425.81 405.78zM1425.81 444.78L1459.59 464.28L1459.59 503.28L1425.81 522.78L1392.03 503.28L1392.03 464.28zM1425.81 561.78L1459.59 581.28L1459.59 620.28L1425.81 639.78L1392.03 620.28L1392.03 581.28z' stroke='rgba(33%2c 50%2c 94%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1058'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;  
+    padding-bottom: 100px;  
+    position: relative; 
+    z-index: 200;
+} 
+.cabecera_img{ 
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 50px;
+    padding: 8px ;  
+    border-radius: var(--border-redious);
+    background-color: var(--color-ama);
+    z-index: 250; 
+    box-shadow: var(--box-black);
+}
+.img-cab{
+    box-sizing: border-box;  
+    height: 450px; 
+} 
+.cabecera_texto{
+    margin: auto; 
+    background-color: #01003fb7;  
+    border-radius: var(--border-redious); 
+    backdrop-filter: blur(10); 
+    padding: 5px 10px;
+    height: 50%;
+    width: 38%; 
+    box-shadow: var(--box-black);
+}
+.cabecera_h2{  
+    color: var(--color-blanco);
+    padding: 10px 15px; 
+    font-size: 40px;
+    font-weight: 600; 
+    margin: auto;  
+} 
+.cabecera_h3{
+    color: var(--color-blanco);
+    font-size: 40px;
+    font-weight: 400;
+}
+.palabras_dinamicas{
+    color: var(--color-ama); 
+    font-weight: 700;
+} 
+.wave1{
+    width: 100%;
+    height: 49%;
+    position: absolute; 
+    top: 52%;
+    background-image: url(assets/wave.svg); 
+    box-sizing: border-box; 
+    background-position: bottom; 
+    background-size: cover;
+    z-index: 100;
+}   
+/* responcive de cabecera */
+@media screen and (max-width: 900px){
+    .cabecera_img{
+        display: none;
+    }
+    .cabecera{
+        padding: 40px 0px; 
+        padding-bottom: 200px;
+    } 
+    .cabecera_texto{
+        margin: auto; 
+        background-color: #01003fb7;  
+        border-radius: var(--border-redious); 
+        backdrop-filter: blur(10); 
+        padding: 5px 10px;
+        height: 50%;
+        width: auto;
+    }
+} 
+/* Estilo seccion sobre mi------------------------------------------------------------------------------------- */
+
+.presentacion{  
+    padding-top: 40px;
+    position: relative; 
+    z-index: 150;
+    background-color: var(--color-azul1); 
+    height: 550px;
+}
+.texto-pre{
+    color: var(--color-blanco);  
+    margin-left: 20px;
+}  
+.h2-pre{
+    margin-top: 40px;
+}
+.h4-pre{ 
+    height: 100% ;
+    padding: 20px;
+    font-size: 18px; 
+    font-weight: 400;
+    margin: 20px 150px; 
+    border: var(--color-azul2) solid 3px; 
+    border-radius: var(--border-redious);
+
+} 
+.wave2 {
+    width: 100%;
+    height: 55%;
+    position: absolute; 
+    top: 52%;
+    background-image: url(assets/wave2.svg); 
+    box-sizing: border-box; 
+    background-position: bottom; 
+    background-size: cover; 
+    z-index: 20;
+
+} 
+
+/* estilo habilidades -------------------------------------------------*/
+.habilidades{
+    background-color: var(--color-azul2); 
+    position: relative; 
+    top: 30px; 
+    z-index: 110; 
+    padding-bottom: 80px;
+}
+.h2-hab{
+    margin-top: 90px;
+} 
+.hab-card{
+    margin-top: 45px;
+    margin-left: 50px; 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+
+} 
+.icon-hab{  
+    font-size: 90px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    margin-top: 25%; 
+    color: var(--color-blanco); 
+    text-shadow: var(--box-black);
+}  
+.h3_hab{ 
+   margin-top: 20px;
+   font-size: 30px; 
+   font-weight: 500;
+}
+.card:hover .icon-hab {
+    color: var(--color-ama);
+
+} 
+
+/* From cssbuttons.io by @fanishah */
+.card {
+    width: 10.5rem;
+    height: 15rem;
+    background-color: var(--color-azul1);
+    border-radius: 1rem;
+    border: var(--color-azul1) 0.2rem solid;
+    transition: all 0.4s ease-in;
+    box-shadow: 0.4rem 0.4rem 0.6rem #00000040; 
+    text-align: center; 
+    margin: 20px; 
+    color: var(--color-blanco); 
+    z-index: 110;
+   }
+   
+   .card:hover{
+    transform: translateY(-1.5rem);
+    border: var(--color-ama) 0.2em solid;
+    border-radius: 2.5rem 0 2.5rem 0;
+    
+   }  
+   .wave3{
+    width: 100%;
+    height: 55%;
+    position: absolute;
+    top: 45%;
+    background-image: url(assets/wave3.svg); 
+    box-sizing: border-box; 
+    background-position: bottom; 
+    background-size: cover;
+    z-index: 100;
+   }
+/* Media deccion habilidades */
+@media screen and (max-width: 835px){
+    .texto-pre{
+        text-align: center;
+    }
+    .hab-titulo{
+        text-align: center; 
+    }
+    .h2-hab{ 
+    text-align: center;
+    position: relative;  
+    margin: 0px;
+    margin-top: 6px; 
+    padding-top: 20px;
+    font-size: 28px; 
+    font-weight: 700; 
+    background-color: var(--color-ama);  
+    display: inline-block;
+    color: var(--color-azul2); 
+    box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.604); 
+    border-radius: var(--border-redious);
+} 
+    .hab-card{  
+        margin: 0px;
+        margin-top: 45px; 
+        display: flex; 
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;} 
+    .h4-pre{
+        margin: 20px;
+    }
+    
+    } 
+     
+/* Estilo portafolio------------------------------------------------- */ 
+.portafolio{
+    background-color: var(--color-ama); 
+    position: relative;
+    z-index: 120; 
+    padding-bottom: 30px; 
+    overflow: hidden; 
+    padding-bottom: 50px;
+} 
+.h2-por{
+    margin-top: 90px;
+}
+  .paginas{
+     display: flex;
+     flex-direction: row; 
+     flex-wrap: wrap; 
+     justify-content: start;
+     position: relative;
+     left: 10%; 
+ }
+ .container{ 
+     display: flex; 
+     flex-direction: column;
+     align-items: center; 
+     position: relative;
+     margin: 40px 40px;
+     background-color: var(--color-azul1);
+     border-radius: var(--border-redious);
+     box-shadow: var(--box-black);
+     color: var(--color-blanco);
+     overflow: hidden; 
+     max-width: 35%; 
+     z-index: 90; 
+     border: var(--color-azul1) 2px solid; 
+     object-fit: contain;
+     object-position: top;
+ }    
+ .container-texto{
+     text-align: center;
+     margin:10px 20px;
+ } 
+ .container-texto-h2{
+     font-size: 22px; 
+     font-weight: 500;
+ } 
+ .container-texto-h4{
+    font-size: 12px; 
+    font-weight: 300;
+ }
+ .container-img{ 
+    -webkit-filter: grayscale(100%);  
+    height: 100%;
+    max-width: 100%;
+    cursor: pointer;
+    object-fit: contain;
+     object-position: top;
+}   
+/* boton------------------------------------ */
+/* From cssbuttons.io by @westitan */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit; 
+    margin-top: 15px;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-ama);
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--color-azul1);
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: var(--color-blanco);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: var(--color-azul1);
+   }
+/* finboton--------------------------------- */
+.wave4{
+    width: 100%;
+    height: 55%;
+    position: absolute;
+    top: 50%;
+    background-image: url(assets/wave4.svg); 
+    box-sizing: border-box; 
+    background-position: bottom; 
+    background-size: cover;
+    z-index: 20;
+   }
+/* Media srcenn------------------------------- */
+@media screen and (max-width: 835px){
+    .container{
+        flex-direction: column;
+        
+    }  
+}
+
+/* contacto---------------------------------------------------------------- */
+.contacto{
+    background-color: var(--color-blanco);
+} 
+.h2-con{
+    color: var(--color-azul1); 
+    padding: 30px;
+} 
+.ul-con{
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%; 
+    list-style: none;
+} 
+.li-con{ 
+    margin: 20px;
+} 
+.a-con{
+    cursor: pointer; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    transition: 500ms; 
+    color: var(--color-azul2);
+}  
+.a-con i{
+font-size: 30px;
+}
+.a-con:hover{
+    color: var(--color-ama);
+}
