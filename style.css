@@ -574,9 +574,8 @@ button {
 @media screen and (max-width: 835px){
     .container{
         flex-direction: column; 
-        width: 50%;
-        
-    }  
+        max-width: 70%;
+        }   
 }
 
 /* contacto---------------------------------------------------------------- */
@@ -611,4 +610,11 @@ font-size: 30px;
 }
 .a-con:hover{
     color: var(--color-ama);
+} 
+@media screen and (max-width: 835px){ 
+    .ul-con{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
