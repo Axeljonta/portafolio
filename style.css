@@ -203,9 +203,13 @@ a.selected {
     margin-top: 50px;
     padding: 8px ;  
     border-radius: var(--border-redious);
-    background-color: var(--color-ama);
+    /* background-color: var(--color-ama); */
     z-index: 250; 
     box-shadow: var(--box-black);
+    height: 440px;
+    width: 381px;
+    background-image: url(./assets/yo.jpg); 
+    background-repeat: round;
 }
 .img-cab{
     box-sizing: border-box;  
